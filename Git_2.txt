@@ -1,0 +1,82 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bug Reports
+- SQL
+- Charles
+- Mobile testing
+ -->> git branch Postman
+      git branch Jmeter
+      git branch CheckLists
+      git branch Bug_Reports
+      git branch SQL
+      git branch Charles
+      git branch Mobile_testing
+
+2. Запушить все ветки на внешний репозиторий -->> git push --all
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+-->> git checkout Bug_Reports
+     vim bug_reports.txt
+
+ID: A1
+       Заголовок: Нажатие кнопки 'Перейти в каталог' на главную страницу не перенаправляет страницу на Каталог
+       Проект: Сайт магазина 'Инструменты'
+       СИЛ:
+                страница 1. Зайти на главную сайт (ссылка_на_сайт)
+                2. Нажать режим Каталог
+
+        Компонент: Кнопка Каталог
+        Сборка: 0.5.7
+        Фактический результат: Нажатие кнопок Каталог НЕ перенаправляет на страницу Каталога
+        Ожидаемый результат: Нажатие кнопки Каталог перенаправляет на страницу Каталога
+        Серьезность: критическая
+        Приоритет: высокий
+        Статус: Открыт
+        Автор: Олег Кисилев
+        Знак: Виктор Орлов
+        Вложения: ссылка_на_картинку_или_видео_с_багом
+
+4. Запушить структуру багрепорта на внешний репозиторий
+-->> git add bug_reports.txt
+     git commit -m "add bug"
+     git push -u origin Bug_Reports
+
+
+5. Вмержить ветку Bag Reports в Main
+-->> git checkout main
+     git merge Bug_reports
+6. Запушить main на внешний репозиторий.
+-->> git push
+7. В ветке CheckLists набросать структуру чек листа.
+-->> git checkout CheckLists
+     vim checklist.txt
+
+
+Чек лист смоук тестирования
+1) Сайт открывается и доступен.
+2) Основные элементы сайта работают корректно.
+3) Нет ошибок в консоли.
+4) Нет битых ссылок.
+5) Основные страницы сайта открываются и работают.
+6) Нет видимых ошибок на главной странице.
+
+
+
+8. Запушить структуру на внешний репозиторий
+-->> git add checklist.txt
+     git commit -m "check"
+     git push -u origin CheckLists 
+
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+-->> Compare & pull request
+     Add checklist.txt
+     Create pull request
+     Merge pull request
+     Confirm merge
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+-->> git checkout main
+     git pull
